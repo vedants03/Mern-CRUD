@@ -11,7 +11,7 @@ app.use("/books", router); // localhost:5000/books
 
 mongoose
   .connect(
-    "mongodb+srv://VedantShahu:vedsha@cluster0.xwhknbc.mongodb.net/?retryWrites=true&w=majority"
+    process.env.MONGO_DB_URL
   )
   .then(() => console.log("Connected To Database"))
   .then(() => {
